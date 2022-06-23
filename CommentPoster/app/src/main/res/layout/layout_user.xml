@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="18dp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:text="Email"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:layout_below="@id/tvName"
+            />
+
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmail"
+            android:layout_toLeftOf="@id/tvDate"
+            android:layout_marginLeft="20dp"
+            android:text="Last Updated: "
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmail"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Dummy"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@android:drawable/ic_delete" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
