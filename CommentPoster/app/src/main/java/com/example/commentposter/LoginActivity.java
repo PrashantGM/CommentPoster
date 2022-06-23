@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter both email and password!", Toast.LENGTH_SHORT).show();
                 }
                 else if(email.equals("admin@gmail.com") && password.equals("admin@123")){
-                    startActivity(new Intent(LoginActivity.this,AdminActivity.class));
+                    startActivity(new Intent(LoginActivity.this,MainActivity.class).putExtra("name","Admin").putExtra("type","adminUser").putExtra("email",email));
                 }
                 else
                 {
@@ -53,8 +53,10 @@ public class LoginActivity extends AppCompatActivity {
                                 });
                             }else{
                                 String name=userEntity.name;
+                                String email=userEntity.email;
+
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class)
-                                        .putExtra("name",name));
+                                        .putExtra("name",name).putExtra("type","normalUser").putExtra("email",email));
                             }
                         }
                     }).start();

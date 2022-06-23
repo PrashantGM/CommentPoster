@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/g_timeline"
+            android:title="General Timeline" />
+    </group>
+
+
+        <item android:title="User Settings">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/user_acccount"
+                    android:title="Edit Profile" />
+                    <item
+                        android:id="@+id/nav_admin"
+                        android:icon="@drawable/ic_baseline_admin_panel_settings_24"
+                        android:title="Admin Dashboard" />
+                </group>
+            </menu>
+        </item>
+
+
+</menu>
