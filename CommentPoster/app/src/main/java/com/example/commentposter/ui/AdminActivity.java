@@ -1,15 +1,16 @@
-package com.example.commentposter;
+package com.example.commentposter.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
+import com.example.commentposter.CommentPosterDB;
+import com.example.commentposter.R;
 import com.example.commentposter.adapter.UserAdapter;
+import com.example.commentposter.dao.UserDAO;
+import com.example.commentposter.entity.User;
 
 import java.util.List;
 
@@ -30,12 +31,12 @@ public class AdminActivity extends AppCompatActivity {
 
    }
     public void loadUsers(){
-        UserDatabase userDatabase = UserDatabase.getUserDatabase(getApplicationContext());
-        UserDAO userDAO = userDatabase.userDAO();
+        CommentPosterDB commentPosterDB = CommentPosterDB.getUserDatabase(getApplicationContext());
+        UserDAO userDAO = commentPosterDB.userDAO();
         new Thread(new Runnable() {
             @Override
             public void run() {
-                List<UserEntity> users = userDAO.getAllUsers();
+                List<User> users = userDAO.getAllUsers();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -43,7 +44,6 @@ public class AdminActivity extends AppCompatActivity {
                         recyclerView.setAdapter(userAdapter);
                     }
                 });
-
             }
         }).start();
     }

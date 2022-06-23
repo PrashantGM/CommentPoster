@@ -1,6 +1,5 @@
 package com.example.commentposter.adapter;
 
-import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,18 +9,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.commentposter.CommentPosterDB;
 import com.example.commentposter.R;
-import com.example.commentposter.UserDAO;
-import com.example.commentposter.UserDatabase;
-import com.example.commentposter.UserEntity;
+import com.example.commentposter.dao.UserDAO;
+import com.example.commentposter.entity.User;
 
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
 
-    List<UserEntity> lstUsers;
+    List<User> lstUsers;
 
-    public UserAdapter(List<UserEntity> lstUsers) {
+    public UserAdapter(List<User> lstUsers) {
         this.lstUsers = lstUsers;
     }
 
@@ -35,17 +34,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
 //        String users=lstUsers[position];
-        UserEntity userdata=lstUsers.get(position);
+        User userdata=lstUsers.get(position);
         holder.tvName.setText(userdata.getName());
         holder.tvEmail.setText(userdata.getEmail());
-        holder.tvDate.setText(userdata.getDate());
+        holder.tvDate.setText(userdata.getDateUpdated());
         String email=userdata.getEmail();
         holder.ivDelete.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                UserDatabase userDatabase=UserDatabase.getUserDatabase(holder.tvEmail.getContext());
-                UserDAO userDAO=userDatabase.userDAO();
+                CommentPosterDB commentPosterDB = CommentPosterDB.getUserDatabase(holder.tvEmail.getContext());
+                UserDAO userDAO= commentPosterDB.userDAO();
                 userDAO.deleteUser(email);
                 lstUsers.remove(userdata);
                 notifyDataSetChanged();

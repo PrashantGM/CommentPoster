@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
 
     >
     <!--    tools:openDrawer="start"-->
@@ -34,8 +34,9 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="#d3d3d3"
-                app:navigationIcon="@drawable/ic_baseline_menu_34" />
+                android:background="#00008B"
+                android:theme="@style/toolBarStyle"
+                app:navigationIcon="@drawable/ic_baseline_menu_34_white" />
 
 
             <FrameLayout

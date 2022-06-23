@@ -6,8 +6,11 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/g_timeline"
             android:title="General Timeline" />
+        <item
+            android:id="@+id/nav_newPost"
+            android:icon="@drawable/ic_baseline_add_comment_24"
+            android:title="New Post" />
     </group>
-
 
         <item android:title="User Settings">
             <menu>
@@ -23,6 +26,5 @@
                 </group>
             </menu>
         </item>
-
 
 </menu>

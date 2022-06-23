@@ -1,15 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:layout_height="wrap_content"
+    tools:context=".ui.RegistrationActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tvFTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Profile Fragment"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+        android:text="Update Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp" />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/tvFTitle"-->
+<!--        android:text="Full Name: "-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20sp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:fontFamily="sans-serif-condensed"/>-->
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/etFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/black"
+        android:textColorHint="#666666"
+        android:hint="Full Name"
+        android:fontFamily="sans-serif-condensed"
+        />
+
+    <EditText
+        android:id="@+id/etFEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dark_blue"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="top|left"
+        android:hint="Email Address"
+        android:inputType="none"
+        android:textColor="@color/black"
+        android:enabled="false"
+        android:textColorHint="#666666" />
+
+    <EditText
+        android:id="@+id/etFPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFEmail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dark_blue"
+        android:hint="Password"
+        android:fontFamily="sans-serif-condensed"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="#666666" />
+    <EditText
+        android:id="@+id/etFDateRegistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Registered Date"
+        android:textColorHint="#666666"
+        android:backgroundTint="@color/black"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/etFPassword"
+        android:inputType="none"
+        android:enabled="false"
+        />
+
+    <EditText
+        android:id="@+id/etFDateUpdated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Updated Date"
+        android:textColorHint="#666666"
+        android:backgroundTint="@color/black"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_below="@+id/etFDateRegistered"
+        />
+
+    <Button
+        android:id="@+id/btnFUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etFDateUpdated"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="@color/dark_blue"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Update"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

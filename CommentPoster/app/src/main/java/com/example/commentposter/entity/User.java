@@ -1,28 +1,29 @@
-package com.example.commentposter;
+package com.example.commentposter.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "users")
-public class UserEntity {
+public class User {
 
     @PrimaryKey(autoGenerate = true)
-    Integer id;
+    public Integer id;
 
     @ColumnInfo(name = "name")
-    String name;
+    public String name;
 
     @ColumnInfo(name = "email")
-    String email;
+    public String email;
 
     @ColumnInfo(name="password")
-    String password;
+    public String password;
 
-    @ColumnInfo(name = "date")
-    String date;
+    @ColumnInfo(name = "dateRegistered")
+    public String dateRegistered;
 
-
+    @ColumnInfo(name="dateUpdated")
+    public String dateUpdated;
 
     public Integer getId() {
         return id;
@@ -58,11 +59,20 @@ public class UserEntity {
         this.password = password;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateUpdated() {
+        return dateUpdated;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateUpdated(String dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+
+    public String getDateRegistered() {
+        return dateRegistered;
+    }
+
+    public void setDateRegistered(String dateRegistered) {
+        this.dateRegistered = dateRegistered;
     }
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constlayout"
-    tools:context=".LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -31,9 +31,11 @@
         android:background="#0D215E"
         android:drawableLeft="@drawable/ic_baseline_account_circle_24_white"
         android:ems="10"
+        android:textSize="16sp"
         android:hint=" Email"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -46,9 +48,11 @@
         android:layout_height="32dp"
         android:layout_marginTop="12dp"
         android:background="#0D215E"
+        android:textSize="16sp"
         android:drawableLeft="@drawable/ic_baseline_lock_24_white"
         android:ems="10"
         android:hint=" Password"
+        android:fontFamily="sans-serif-condensed"
         android:inputType="textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -68,9 +72,11 @@
         android:backgroundTint="@color/dark_blue"
         android:fontFamily="sans-serif-condensed"
         android:text="Login"
+
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
