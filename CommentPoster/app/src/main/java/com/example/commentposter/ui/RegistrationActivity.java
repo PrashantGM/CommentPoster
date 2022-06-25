@@ -1,8 +1,6 @@
 package com.example.commentposter.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,7 +36,7 @@ public class RegistrationActivity extends AppCompatActivity {
                userEntity.setPassword(etPassword.getText().toString());
                userEntity.setDateRegistered(etDateRegistered.getText().toString());
                if(validateInput(userEntity)){
-                   CommentPosterDB commentPosterDB = CommentPosterDB.getUserDatabase(getApplicationContext());
+                   CommentPosterDB commentPosterDB = CommentPosterDB.getCommentPosterDB(getApplicationContext());
                    final UserDAO userDAO= commentPosterDB.userDAO();
                    new Thread(new Runnable() {
                        @Override
@@ -77,7 +75,6 @@ public class RegistrationActivity extends AppCompatActivity {
                    Toast.makeText(getApplicationContext(), "Please fill all fields!", Toast.LENGTH_LONG).show();
                }
                 finish();
-//                startActivity(new Intent(RegistrationActivity.this,LoginActivity.class));
             }
         });
     }

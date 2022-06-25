@@ -41,10 +41,9 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/black"
-        android:textColorHint="#666666"
-        android:hint="Full Name"
         android:fontFamily="sans-serif-condensed"
-        />
+        android:hint="Full Name"
+        android:textColorHint="#666666" />
 
     <EditText
         android:id="@+id/etFEmail"

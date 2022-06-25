@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/timeline_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.GeneralTimelineActivityFragment">
+    tools:context=".ui.fragments.MyTimelineActivityFragment">
 
-    <ImageView
-        android:id="@+id/ivRefresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_autorenew_24"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:clickable="true"
-        />
     <TextView
-        android:id="@+id/tvGTimeLine"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvMyPosts"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="General TimeLine"
+        android:text="My TimeLine"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
@@ -29,17 +18,24 @@
         android:textSize="22sp"
         android:layout_marginLeft="20dp"/>
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/timelineView"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivRefresh"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvGTimeLine"
-        android:background="#E1DDEC"
-        android:scrollbars="vertical"
-        android:scrollbarStyle="outsideInset"
-        android:scrollbarThumbVertical="@android:color/darker_gray"
+        android:background="@drawable/ic_baseline_autorenew_30_black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
         />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myPostsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E1DDEC"
+            android:layout_below="@id/tvMyPosts"/>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddPost"
@@ -48,7 +44,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="end|bottom"
-        android:layout_margin="15dp"
         android:src="@drawable/ic_baseline_add_comment_40" />
 
 </RelativeLayout>

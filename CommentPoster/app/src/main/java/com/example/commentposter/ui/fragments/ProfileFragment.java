@@ -18,10 +18,6 @@ import com.example.commentposter.R;
 import com.example.commentposter.dao.UserDAO;
 import com.example.commentposter.entity.User;
 import com.example.commentposter.ui.MainActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.List;
-
 
 public class ProfileFragment extends Fragment {
 
@@ -42,7 +38,7 @@ public class ProfileFragment extends Fragment {
         etFDateUpdated= view.findViewById(R.id.etFDateUpdated);
         etFDateRegistered= view.findViewById(R.id.etFDateRegistered);
 
-        CommentPosterDB commentPosterDB = CommentPosterDB.getUserDatabase(getActivity());
+        CommentPosterDB commentPosterDB = CommentPosterDB.getCommentPosterDB(getActivity());
         final UserDAO userDAO= commentPosterDB.userDAO();
         MainActivity mainActivity=(MainActivity) getActivity();
         String email=mainActivity.getMyEmail();

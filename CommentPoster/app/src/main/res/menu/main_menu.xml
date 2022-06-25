@@ -20,9 +20,18 @@
                     android:icon="@drawable/user_acccount"
                     android:title="Edit Profile" />
                     <item
+                        android:id="@+id/nav_myPosts"
+                        android:icon="@drawable/ic_baseline_dataset_24"
+                        android:title="My Timeline" />
+                    <item
                         android:id="@+id/nav_admin"
                         android:icon="@drawable/ic_baseline_admin_panel_settings_24"
                         android:title="Admin Dashboard" />
+                    <item
+                        android:id="@+id/nav_logout"
+                        android:icon="@drawable/user_acccount"
+                        android:title="LogOut" />
+
                 </group>
             </menu>
         </item>

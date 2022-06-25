@@ -43,7 +43,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
             @Override
             public void onClick(View view) {
-                CommentPosterDB commentPosterDB = CommentPosterDB.getUserDatabase(holder.tvEmail.getContext());
+                CommentPosterDB commentPosterDB = CommentPosterDB.getCommentPosterDB(holder.tvEmail.getContext());
                 UserDAO userDAO= commentPosterDB.userDAO();
                 userDAO.deleteUser(email);
                 lstUsers.remove(userdata);
